@@ -118,3 +118,6 @@ S = cone's sensitivity
 -- by adjusting the weights (intensity) of those three primaries, they can recreate the appearance of almost any test light
 (this is the foundation of every display technology we use)
 
+**Color Space:**
+-- color space is like a coordinate system - (R, G, B) or (H, S, V) triplet tells us where a color sits in a color space
+  
