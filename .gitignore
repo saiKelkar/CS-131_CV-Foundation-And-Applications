@@ -190,3 +190,7 @@ cython_debug/
 
 # Ignore custom CSS snippets
 .obsidian/snippets/
+
+# Ignore UI state (open tabs, sidebars, etc.)
+.obsidian/workspace.json
+.obsidian/graph.json
