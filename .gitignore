@@ -194,3 +194,4 @@ cython_debug/
 # Ignore UI state (open tabs, sidebars, etc.)
 .obsidian/workspace.json
 .obsidian/graph.json
+*.obsidian/
