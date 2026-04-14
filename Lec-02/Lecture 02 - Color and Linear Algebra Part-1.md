@@ -77,6 +77,44 @@ $C(\lambda)$ = the color signal (the light that actually enters your eye)
 
 -- the missing piece is the observer (to turn the color signal into an actual perceived color, you have to multiply it by the sensitivity of the human eye's cones - long, medium, and short wavelengths)
 
-Note:
--- PSD is a graph or a data set that shows the fingerprint of a light source. It plots Power (vertical axis) against Wavelength (horizontal axis)
--- Why spectral matters: if we know the PSD of a light bulb and the Reflectance Spectrum of a wall paint, we can mathematically predict exactly what color that wall will look like under that light. 
+*Note:*
+*-- PSD is a graph or a data set that shows the fingerprint of a light source. It plots Power (vertical axis) against Wavelength (horizontal axis)*
+*-- Why spectral matters: if we know the PSD of a light bulb and the Reflectance Spectrum of a wall paint, we can mathematically predict exactly what color that wall will look like under that light.*
+
+**Rods and Cones (the Sensors):**
+-- our eye is like a digital camera, but instead of a uniform grid of pixels, our sensor (the retina) has two very different types of light-detecting cells
+-- rods(night vision): 
+	-- these are incredibly sensitive
+	-- they can trigger from a single photon
+	-- they all have the same filter, so they can't distinguish between colors (this is why everything looks grayscale in a very dark room)
+-- cones(color / detail):
+	-- these require much more light to fire
+	-- they are packed mostly in the center of your vision (the fovea), providing the high resolution you need for reading or recognizing faces
+
+**Three Number concept:**
+-- human eye compresses a complex, continuous spectrum of light into just three electrical signals
+-- each type of cone acts like a filter, we call them S, M, and L (short, medium, and long wavelengths)
+	-- S-cones: Peak around 440nm (Blue)
+	-- M-cones: Peak around 530nm (Green)
+	-- L-cones: Peak around 560nm (Red / Yellow)
+
+-- when light hits our eye, our brain doesn't see the whole graph (spectrum); instead, it does a quick calculus problem for each cone type
+$$V = \int_{400}^{700} \Phi(\lambda) \cdot S(\lambda) \, d\lambda$$
+V = response of a cone
+$\Phi$ = light spectrum
+S = cone's sensitivity
+
+-- because we have three types of cones, our eye sends exactly three numbers to the brain
+-- this is why we use RGB (Red, Green, Blue) in screens
+
+**Metamerism - the Great Illusion:**
+-- because we compress a complex spectrum (which could have infinite variations) into just three numbers, we lose data
+-- metamers are two different light spectra that result in the exact same three numbers being sent to the brain
+(e.g., pure yellow laser - one spike at 580nm, might look identical to a mix of red and use green light. Even though the physics are different, our brain can't tell them apart because they stimulate our M and L cones in the same proportion)
+
+**Color Matching and Trichromatic Theory:** (color matching experiment - a proof that our vision is trichromatic)
+-- a subject looks at a test light (a color)
+-- they are given three primary lights - typically RGB
+-- by adjusting the weights (intensity) of those three primaries, they can recreate the appearance of almost any test light
+(this is the foundation of every display technology we use)
+
