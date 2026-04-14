@@ -179,3 +179,14 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+*.pdf 
+
+# Ignore the active theme selection and appearance settings
+.obsidian/appearance.json
+
+# Ignore downloaded community themes
+.obsidian/themes/
+
+# Ignore custom CSS snippets
+.obsidian/snippets/
