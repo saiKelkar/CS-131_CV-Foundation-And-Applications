@@ -120,4 +120,18 @@ S = cone's sensitivity
 
 **Color Space:**
 -- color space is like a coordinate system - (R, G, B) or (H, S, V) triplet tells us where a color sits in a color space
-  
+-- the goal is to map every perceivable color to a unique set of numbers so that a computer or a printer can reproduce it exactly
+
+**Linear Color Space (RGB and XYZ):**
+-- Grassmann's Law: human color perception behaves like linear algebra (e.g., if you mix two lights, the resulting color is simply the sum of their vectors)
+-- RGB Space (the Problem): because of how our cones overlap, there are some 'real-world' colors that a standard monitor cannot recreate by just adding R, G, and B. To match them in a lab, you'd actually have to subtract light (which is physically impossible for a screen)
+-- CIE XYZ (the Master space): to fix the negative numbers problem in RGB, CIE XYZ is created. 
+Y = Luminance (specifically designed to match the human perception of brightness)
+
+As both are linear, we can convert RGB to XYZ using a simple 3x3 matrix:
+$$\begin{bmatrix} X \\ Y \\ Z \end{bmatrix} = \mathbf{M} \begin{bmatrix} R \\G \\ B \end{bmatrix}$$
+**Nonlinear Color Space (HSV):**
+-- Hue (H): the flavor of the color (Red, Orange, Blue). Usually mapped to an angle (0° to 360°)
+-- Saturation (S): the purity or vibrancy. 0% is gray and 100% is the pure color
+-- Value (V): the brightness. 0% is black
+
