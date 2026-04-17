@@ -180,8 +180,6 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 
-*.pdf 
-
 # Ignore the active theme selection and appearance settings
 .obsidian/appearance.json
 
