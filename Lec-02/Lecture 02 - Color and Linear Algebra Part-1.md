@@ -141,4 +141,30 @@ For e.g., a candle or a sunset gives off a warm, orange glow, while a cloudy sky
 -- Our brains are smart - if you hold a white piece of paper under a yellow light bulb, our brain tells us 'that paper is white'. A camera, however, just sees 'yellow paper'.
 White balancing is the process of telling the camera to ignore those tints so that neutral colors (whites and grays) look natural. 
 
+Importance of white balancing: (without white balancing, images would look off - usually too orange or too blue)
+- Our eyes vs. Sensors: The brain auto-corrects light in real-time. A camera sensor is a literal machine; it just records exactly what it sees without the benefit of human perception.
+- Screens aren't the same: An image might look perfect on our phone but looks slightly green on a laptop or different again when printed. White balancing provides a standardized neutral starting point so the image looks consistent across different devices. 
+- The vibe of the room: When we take a photo in a dimply lit cafe, our eyes adapt to the mood. But when we look at the same photo later in bright daylight, the yellowish tint from the cafe lights will look messy and unnatural unless the white balance was adjusted to compensate. 
+
+**Von Kries Method (The Volume Knob Approach):**
+(most basic way to fix color) Imagine our image has three volume knobs: Red, Green, and Blue. If the photo looks too blue, we simply turn the blue knob down or the red/green knobs up until it looks balanced.
+
+- Gray Card Method: to do this accurately, we hold up a card that is perfectly neutral gray in front of the camera. The camera looks at it and says, 'this should be neutral, but I'm seeing it as 10% too blue'. 
+  It then calculates exactly how much to turn down the blue channel across the whole photo to make the card look gray again. 
+
+**Other Methods (The Guessing Game):**
+If you don't have a gray card, the computer has to guess what 'neutral' should look like. 
+
+- Gray World Assumption: This assumes that if we took every single pixel in a normal photo and mixed them all together in a blender, the result would be a middle-gray. 
+  *The computer calculates the average color of the whole photo. If the average is slightly orange, it shifts the entire image toward blue to bring that average back to neutral gray.* 
+- Brightest Pixel Assumption: This assumes that the brightest part of a photo (like a reflection on a window or a white shirt) is the same color as the light source. 
+  *It finds the brightest pixels and assumes they should be pure white. If those pixels looks slightly yellow, the computer adjusts the whole image to remove that yellow tint.* 
+- Gamut Mapping: A gamut is like a boundary map of all the colors present in a photo. 
+  *It treats the colors like a 3D shape. It takes the tilted shape of your off-color photo and mathematically stretches and squashes it until it matches the shape of a standard photo taken under perfect while light.* 
+
+**Other uses of Color in CV:**
+Color isn't just for making photos look pretty; it's a tool for AI to understand what it's looking at:
+
+- Detection: Certain things have very specific color signatures. For e.g., skin tones (regardless of ethnicity) fall into a very specific range on the color spectrum, making it easier for AI to find people in a crowd or filter out inappropriate content. 
+- Segmentation: Color helps the computer 'cut out' objects from the background. If a blue chair is sitting on a green floor, the color difference is the easiest way for the computer to draw a line between the chair and the ground. 
 
