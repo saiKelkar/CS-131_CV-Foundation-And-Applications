@@ -135,3 +135,10 @@ $$\begin{bmatrix} X \\ Y \\ Z \end{bmatrix} = \mathbf{M} \begin{bmatrix} R \\G \
 -- Saturation (S): the purity or vibrancy. 0% is gray and 100% is the pure color
 -- Value (V): the brightness. 0% is black
 
+**White Balancing:**
+-- Different light sources have different temperatures. 
+For e.g., a candle or a sunset gives off a warm, orange glow, while a cloudy sky or a fluorescent office light gives off a cool, blue tint. 
+-- Our brains are smart - if you hold a white piece of paper under a yellow light bulb, our brain tells us 'that paper is white'. A camera, however, just sees 'yellow paper'.
+White balancing is the process of telling the camera to ignore those tints so that neutral colors (whites and grays) look natural. 
+
+
