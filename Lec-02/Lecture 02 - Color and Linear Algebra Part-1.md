@@ -168,3 +168,17 @@ Color isn't just for making photos look pretty; it's a tool for AI to understand
 - Detection: Certain things have very specific color signatures. For e.g., skin tones (regardless of ethnicity) fall into a very specific range on the color spectrum, making it easier for AI to find people in a crowd or filter out inappropriate content. 
 - Segmentation: Color helps the computer 'cut out' objects from the background. If a blue chair is sitting on a green floor, the color difference is the easiest way for the computer to draw a line between the chair and the ground. 
 
+**Linear Algebra Primer: Vectors and Matrices**
+Vectors and matrices are collections of ordered numbers that represent something: movement in space, scaling factors, pixel brightness, etc. 
+
+Column vector ($v$): This is a standing list (numbers stacked on top of each other)
+Row vector ($v^T$): This is a lying down list (numbers are side-by-side)
+Transpose ($T$): This is the flip (if we have a standing list and we transpose it, it becomes a lying down list and vice versa)
+
+What do these numbers actually represent?
+- Point in space (geometric) -- (most intuitive version)
+  if we have a 3D space, a vector like [3, 4, 5] represents a specific location or an offset (move 3 units right, 4 units up, 5 units forward)
+- A collection of data (abstract) -- (the numbers are attributes)
+  imagine a vector that stores the brightness of 100 pixels in a row
+  even if these numbers aren't locations, we can still use math to find the distance between two data vectors. if the distance between two pixel-data vectors is small, it means the two images look very similar. 
+
